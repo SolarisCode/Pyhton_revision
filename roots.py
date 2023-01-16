@@ -1,4 +1,5 @@
 from sys import stderr
+import doctest
 
 def sqrt(x):
     """Compute the square root using the method of
@@ -12,6 +13,13 @@ def sqrt(x):
 
     Raises:
         ValueError: If x is negative.
+    
+    >>> sqrt(9)
+    3.0
+
+    >>> sqrt(16)
+    4.0
+
     """
     if x < 0:
         raise ValueError("Can't compute the square root of "
@@ -39,4 +47,5 @@ def main():
 
 
 if __name__ == "__main__":
+    doctest.testmod()
     main()
